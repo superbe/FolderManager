@@ -1,0 +1,51 @@
+<chart animation="1" caption="Среднемесячная заработная плата (без выплат соц. характера) по видам экономической 
+деятельности" subcaption="январь-декабрь 2001 г." bgColor="" bgAlpha="0,0" plotFillAlpha="0" showBorder="0"
+divLineColor="7A7A7A" baseFontColor="585858" legendPadding="10" labelPadding="15" legendShadow="0" anchorAlpha="100"
+numberSuffix="%" decimals="2" forceDecimals="1" complexAnchors="1" legendPosition="bottom" legendBorderColor="585858"
+legendBorderThickness="1" showAboutMenuItem="0" showYAxisValues="0" setAdaptiveYMin="1">
+	<categories font="Tahoma" fontSize="10" fontColor="585858">
+		<category label="C/x, охота и лесное хоз-во" />
+		<category label="Рыболовство, рыбоводство" />
+		<category label="Добыча полезных ископаемых" />
+		<category label="Обрабатывающие производства" />
+		<category label="Производство и распред-ние э/э, газа и воды" />
+		<category label="Строительство" />
+		<category label="Опт. и розн. торговля, ремонт а/т средств и пр." />
+		<category label="Гостиницы и рестораны" />
+		<category label="Транспорт и связь" />
+		<category label="Финансовая деятельность" />
+		<category label="Операции недвиж. имущ-ом, аренда и предоставл. услуг"/>
+		<category label="Гос. упр-ние и обеспеч. военной безопасности; обязат. соц. обеспечение" />
+		<category label="Образование" />
+		<category label="Здравоохранение и предоставление соц. услуг" />
+		<category label="Предоставление прочих коммунальных, соц и персональных услуг" />
+	</categories>
+	<dataset SeriesName="Декабрь 2001" color="8bd1ea" showAnchors="1" plotBorderThickness="1">
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+	</dataset>
+	<styles>
+		<definition>
+			<style name="MyCaptionFont" type="font" font="Tahoma" size="12" color="585858"/>
+			<style name="MySubCaptionFont" type="font" font="Tahoma" size="12" bold="0" color="585858" />
+		</definition>
+		<application>
+			<apply toObject="Caption" styles="MyCaptionFont">
+			</apply>
+			<apply toObject="subCaption" styles="MySubCaptionFont" />
+		</application>
+	</styles>
+</chart>

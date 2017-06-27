@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<chart animation="0" plotFillAngle="0" plotBorderColor="3D3D3D" showPercentageValues="1" caption="2000 - 2010 гг." subcaption="" PYAxisName="рублей" SYAxisName="" xAxisName="" bgColor="" bgAlpha="0,0" canvasbgAlpha="0" zeroPlaneAlpha="100" canvasBorderColor="ffffff" canvasBgColor="ffffff" canvasBorderThickness="0" canvasBorderAlpha="0" showBorder="0" plotGradientColor="" showDivLineSecondaryValue="0" showSecondaryLimits="0" setAdaptiveYMin="1" divLineColor="7A7A7A" baseFontColor="585858" anchorAlpha="100" showShadow="1" decimals="2" adjustDiv="1" labelDisplay="Rotate" slantLabels="1" decimalSeparator="," thousandSeparator=" " rotateValues="0" formatNumberScale="0" showAboutMenuItem="0" canvasPadding="10" showLegend="0" areaOverColumns="0">
+	<categories font="Tahoma" fontSize="10" fontColor="585858">
+		<category label="2000" />
+		<category label="2001" />
+		<category label="2002" />
+		<category label="2003" />
+		<category label="2004" />
+		<category label="2005" />
+		<category label="2006" />
+		<category label="2009" />
+		<category label="2010" />
+	</categories>
+	
+	
+	<dataset renderAs="Line" color="65BAF7" anchorBgColor="ffffff" SeriesName="Объем валового регионального продукта в расчете на 1 жителя субъекта Российской Федерации, рублей (Республика Саха (Якутия), отчет, данные всех источников)" parentYAxis="P" dashed="0" showValues="1" drawAnchors="1" anchorRadius="4" lineThickness="3" anchorBorderThickness="2">
+		<set toolText="2000&#13;Объем валового регионального продукта в расчете на 1 жителя субъекта Российской Федерации&#13;(Республика Саха (Якутия), отчет, данные всех источников)&#13;85 375,50 рублей" value="85375.50" link="JavaScript:showDynToMap(\\'VIRT_CUBE_825_2011@EXPRESS_825_2011@31000182:15365_0\\', \\'YEARS:2000\\', \\'MapRF\\');"/>
+		<set toolText="2001&#13;Объем валового регионального продукта в расчете на 1 жителя субъекта Российской Федерации&#13;(Республика Саха (Якутия), отчет, данные всех источников)&#13;105 733,30 рублей" value="105733.30" link="JavaScript:showDynToMap(\\'VIRT_CUBE_825_2011@EXPRESS_825_2011@31000182:15365_0\\', \\'YEARS:2001\\', \\'MapRF\\');"/>
+		<set toolText="2002&#13;Объем валового регионального продукта в расчете на 1 жителя субъекта Российской Федерации&#13;(Республика Саха (Якутия), отчет, данные всех источников)&#13;121 163,10 рублей" value="121163.10" link="JavaScript:showDynToMap(\\'VIRT_CUBE_825_2011@EXPRESS_825_2011@31000182:15365_0\\', \\'YEARS:2002\\', \\'MapRF\\');"/>
+		<set toolText="2003&#13;Объем валового регионального продукта в расчете на 1 жителя субъекта Российской Федерации&#13;(Республика Саха (Якутия), отчет, данные всех источников)&#13;140 139,20 рублей" value="140139.20" link="JavaScript:showDynToMap(\\'VIRT_CUBE_825_2011@EXPRESS_825_2011@31000182:15365_0\\', \\'YEARS:2003\\', \\'MapRF\\');"/>
+		<set toolText="2004&#13;Объем валового регионального продукта в расчете на 1 жителя субъекта Российской Федерации&#13;(Республика Саха (Якутия), отчет, данные всех источников)&#13;161 606,60 рублей" value="161606.60" link="JavaScript:showDynToMap(\\'VIRT_CUBE_825_2011@EXPRESS_825_2011@31000182:15365_0\\', \\'YEARS:2004\\', \\'MapRF\\');"/>
+		<set toolText="2005&#13;Объем валового регионального продукта в расчете на 1 жителя субъекта Российской Федерации&#13;(Республика Саха (Якутия), отчет, данные всех источников)&#13;194 857,10 рублей" value="194857.10" link="JavaScript:showDynToMap(\\'VIRT_CUBE_825_2011@EXPRESS_825_2011@31000182:15365_0\\', \\'YEARS:2005\\', \\'MapRF\\');"/>
+		<set toolText="2006&#13;Объем валового регионального продукта в расчете на 1 жителя субъекта Российской Федерации&#13;(Республика Саха (Якутия), отчет, данные всех источников)&#13;214 342,81 рублей" value="214342.81" link="JavaScript:showDynToMap(\\'VIRT_CUBE_825_2011@EXPRESS_825_2011@31000182:15365_0\\', \\'YEARS:2006\\', \\'MapRF\\');"/>
+		<set toolText="2009&#13;Объем валового регионального продукта в расчете на 1 жителя субъекта Российской Федерации&#13;(Республика Саха (Якутия), отчет, данные всех источников)&#13;347 195,60 рублей" value="347195.60" link="JavaScript:showDynToMap(\\'VIRT_CUBE_825_2011@EXPRESS_825_2011@31000182:15365_0\\', \\'YEARS:2009\\', \\'MapRF\\');"/>
+		<set toolText="2010&#13;Объем валового регионального продукта в расчете на 1 жителя субъекта Российской Федерации&#13;(Республика Саха (Якутия), отчет, данные всех источников)&#13;383 319,00 рублей" value="383319.00" link="JavaScript:showDynToMap(\\'VIRT_CUBE_825_2011@EXPRESS_825_2011@31000182:15365_0\\', \\'YEARS:2010\\', \\'MapRF\\');"/>
+	</dataset>
+
+
+	<styles>
+		<definition>
+			<style name="MyCaptionFont" type="font" font="Tahoma" size="12" color="585858" />
+			<style name="MySubCaptionFont" type="font" font="Tahoma" size="10" bold="0" color="585858" />
+		</definition>
+		<application>
+			<apply toObject="Caption" styles="MyCaptionFont"></apply>
+			<apply toObject="subCaption" styles="MySubCaptionFont" />
+		</application>
+	</styles>
+</chart>

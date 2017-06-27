@@ -1,0 +1,91 @@
+Общее
+	https://ru.wikipedia.org/wiki/Дистанционное_образование
+	https://ru.wikipedia.org/wiki/Категория:Дистанционное_образование
+	https://ru.wikipedia.org/wiki/Система_управления_обучением
+	https://ru.wikipedia.org/wiki/Дистанционное_обучение
+	http://www.web-learn.ru/articles/22-технологии-дистанционного-обучения
+	http://www.web-learn.ru/biblioteka-online/18-курсы-дистанционного-обучения
+	http://www.web-learn.ru/biblioteka-online/12-дистанционное-обучение
+	http://www.web-learn.ru/biblioteka-online/34-система-дистанционного-обучения-сдо
+	http://www.web-learn.ru/biblioteka-online/36-e-learning
+	http://www.web-learn.ru/biblioteka-online/41-организация-дистанционного-обучения
+	http://www.web-learn.ru/biblioteka-online/44-возможности-дистанционного-обучения
+	http://elearningchef.com/elearning-tech-and-trends-for-2015/
+	https://en.wikipedia.org/wiki/Learning_management_system
+Книги и учебные пособия
+	http://www.intuit.ru/studies/courses/12103/1165/info
+	http://www.amazon.com/-Learning-Science-Instruction-Guidelines-Multimedia/dp/0470874309/ref=as_sl_pc_tf_mfw?&linkCode=wey&tag=elcaz-20
+Элементы дистанционного образования
+	Общее
+		http://www.web-learn.ru/biblioteka-online/46-элементы-управления-дистанционным-курсом
+	Электронный дневник и журнал:
+		https://ru.wikipedia.org/wiki/Электронный_дневник_и_журнал
+	Вебинар
+		http://www.web-learn.ru/biblioteka-online/52-вебинар
+	Электронный учебник:
+		http://www.courselab.ru/
+		https://www.udemy.com/eauthor-courselab/
+		https://ru.wikipedia.org/wiki/Электронный_учебник
+		http://cm.ru/
+		http://demo.cm.ru/personal/
+		http://demo.cm.ru/Viewer.aspx?BID=4321225
+		http://www.prosv.ru/info.aspx?ob_no=44665
+		http://artgorbunov.ru/projects/book-typography/
+Стандарты форматов дистанционного обучения:
+	Общее
+		http://www.web-learn.ru/biblioteka-online/35-стандарты-в-сфере-дистанционного-обучения
+		http://www.ast-centre.ru/books/favorits/279/
+		http://bit.edu.nstu.ru/archive/issue-3-2004/standarty_v_elektronnom_obuchenii_60/
+		http://elearningchef.com/aicc-scorm-xapi-cclti-cmi-5what-does-it-all-mean/
+		http://www.adlnet.org/
+		http://vvg.nspu.ru/course/view.php?id=16
+	Tin Can API
+		http://tincanapi.com/
+		https://ru.wikipedia.org/wiki/Tin_Can_API
+		http://habrahabr.ru/post/156067/
+		https://en.wikipedia.org/wiki/Experience_API_(Tin_Can_API)
+	SCORM
+		http://www.web-learn.ru/biblioteka-online/37-scorm
+		https://ru.wikipedia.org/wiki/SCORM
+		http://cloud.scorm.com/doc/web-services/api.html
+	MOOC
+		http://vvg.nspu.ru/mod/resource/view.php?id=516
+		https://ru.wikipedia.org/wiki/Массовый_открытый_онлайн-курс
+		https://en.wikipedia.org/wiki/Massive_open_online_course
+		http://elearningchef.com/the-state-of-the-mooc/
+	IMS Global Learning Consortium (IMS GLC)
+		http://www.imsglobal.org/index.html
+		https://en.wikipedia.org/wiki/IMS_Global
+	Федеральный центр информационно-образовательных ресурсов (ФЦИОР)
+		http://fcior.edu.ru/
+	Национальная платформа открытого образования
+		http://npoed.ru/files/npoed_rules_1.0.pdf
+Программное обеспечение (системы управления курсами):
+	Общее
+		http://www.web-learn.ru/do-sr
+		http://elearningchef.com/elearning-chefs-top-5-open-source-lmsystems/
+		http://elearningchef.com/use-an-open-source-or-commercial-lms/
+	Moodle
+		https://moodle.org/
+	eFront
+		http://www.efrontlearning.net/
+	ILIAS
+		http://www.ilias.de/docu/ilias.php?baseClass=ilrepositorygui&reloadpublic=1&cmd=frameset&ref_id=1
+	Sakai
+		https://www.sakaiproject.org/
+	ATutor
+		http://www.atutor.ca/
+	АСУ ВУЗ
+		https://ru.wikipedia.org/wiki/АСУ_ВУЗ
+	Федеральный центр информационно-образовательных ресурсов (ФЦИОР)
+		http://fcior.edu.ru/razrabotchikam
+Курсы (образцы):
+	http://demo.sde.ru/course/view.php?id=27
+	http://www.megacampus.ru +++
+	http://www.intuit.ru/studies/courses/12103/1165/info
+	http://fcior.edu.ru/
+	http://vvg.nspu.ru/course/view.php?id=16
+	https://openedu.ru/
+Словари
+	http://www.web-learn.ru/biblioteka-online/43-глоссарий-в-сфере-технологий-дистанционного-обучения
+	http://www.websoft.ru/db/wb/root_id/glossary/word/aicc/doc.html

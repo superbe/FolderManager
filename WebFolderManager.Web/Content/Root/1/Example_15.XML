@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SuperBE.PSK.WWW</name>
+    </assembly>
+    <members>
+        <member name="T:SuperBE.PSK.WWW.Areas.Operation.Controllers.ErrorsController">
+            <summary>
+            Обработка ошибок.
+            </summary>
+        </member>
+        <member name="M:SuperBE.PSK.WWW.Areas.Operation.Controllers.ErrorsController.Index">
+            <summary>
+            Главная страница.
+            </summary>
+            <returns>Загружаем страницу.</returns>
+        </member>
+        <member name="M:SuperBE.PSK.WWW.Areas.Operation.Controllers.ErrorsController.Error(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Получить коллекцию данных ошибок. 
+            </summary>
+            <param name="page">Номер запрашиваемой страницы.</param>
+            <param name="size">Размер страницы.</param>
+            <param name="text">Строка поискового запроса.</param>
+            <returns>Коллекция данных ошибок.</returns>
+        </member>
+        <member name="M:SuperBE.PSK.WWW.Areas.Operation.Controllers.ErrorsController.Delete(System.String)">
+            <summary>
+            Удалить данные по конкретной ошибке.
+            </summary>
+            <param name="fileName">Имя файла ошибки.</param>
+            <returns>Результат удаления файла, содержащего данные по конкретной ошибке.</returns>
+        </member>
+        <member name="M:SuperBE.PSK.WWW.Areas.Operation.Controllers.ErrorsController.LoadFile(System.String)">
+            <summary>
+            Загрузить файл журнала.
+            </summary>
+            <param name="fileName">Имя файла журнала.</param>
+            <returns>Файл журнала.</returns>
+        </member>
+        <member name="M:SuperBE.PSK.WWW.Areas.Operation.Controllers.ErrorsController.LoadAchive(System.String)">
+            <summary>
+            Загрузить архив с данными по ошибкам.
+            </summary>
+            <param name="fileName">Имя файла архива.</param>
+            <returns>Файл архива.</returns>
+        </member>
+        <member name="T:SuperBE.PSK.WWW.Filters.InitializeSimpleMembershipAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SuperBE.PSK.WWW.MvcApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SuperBE.PSK.WWW.MvcApplication.UserName">
+            <summary>
+            мя пользователя.
+            </summary>
+        </member>
+        <member name="T:SuperBE.PSK.WWW.Properties.Resources">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:SuperBE.PSK.WWW.Properties.Resources.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:SuperBE.PSK.WWW.Properties.Resources.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+    </members>
+</doc>

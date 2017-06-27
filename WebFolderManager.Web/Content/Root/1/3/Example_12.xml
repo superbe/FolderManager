@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<chart>
+	<dataset id="14">
+		<cityName>Белгородская область</cityName>
+		<bar>22.40</bar>
+		<citizen>22.40</citizen>
+	</dataset>
+	<dataset id="15">
+		<cityName>Брянская область</cityName>
+		<bar>3.80</bar>
+		<citizen>3.80</citizen>
+	</dataset>
+	<dataset id="17">
+		<cityName>Владимирская область</cityName>
+		<bar>267.40</bar>
+		<citizen>267.40</citizen>
+	</dataset>
+	<dataset id="20">
+		<cityName>Воронежская область</cityName>
+		<bar>13.10</bar>
+		<citizen>13.10</citizen>
+	</dataset>
+	<dataset id="24">
+		<cityName>Ивановская область</cityName>
+		<bar>6.40</bar>
+		<citizen>6.40</citizen>
+	</dataset>
+	<dataset id="29">
+		<cityName>Калужская область</cityName>
+		<bar>1040.00</bar>
+		<citizen>1040.00</citizen>
+	</dataset>
+	<dataset id="34">
+		<cityName>Костромская область</cityName>
+		<bar>24.80</bar>
+		<citizen>24.80</citizen>
+	</dataset>
+	<dataset id="38">
+		<cityName>Курская область</cityName>
+		<bar>15.20</bar>
+		<citizen>15.20</citizen>
+	</dataset>
+	<dataset id="42">
+		<cityName>Липецкая область</cityName>
+		<bar>151.00</bar>
+		<citizen>151.00</citizen>
+	</dataset>
+	<dataset id="46">
+		<cityName>Московская область</cityName>
+		<bar>311.90</bar>
+		<citizen>311.90</citizen>
+	</dataset>
+	<dataset id="54">
+		<cityName>Орловская область</cityName>
+		<bar>82.30</bar>
+		<citizen>82.30</citizen>
+	</dataset>
+	<dataset id="61">
+		<cityName>Рязанская область</cityName>
+		<bar>42.30</bar>
+		<citizen>42.30</citizen>
+	</dataset>
+	<dataset id="66">
+		<cityName>Смоленская область</cityName>
+		<bar>5.50</bar>
+		<citizen>5.50</citizen>
+	</dataset>
+	<dataset id="68">
+		<cityName>Тамбовская область</cityName>
+		<bar>2.90</bar>
+		<citizen>2.90</citizen>
+	</dataset>
+	<dataset id="28">
+		<cityName>Тверская область</cityName>
+		<bar>32.50</bar>
+		<citizen>32.50</citizen>
+	</dataset>
+	<dataset id="70">
+		<cityName>Тульская область</cityName>
+		<bar>158.60</bar>
+		<citizen>158.60</citizen>
+	</dataset>
+	<dataset id="78">
+		<cityName>Ярославская область</cityName>
+		<bar>0.00</bar>
+		<citizen>0.00</citizen>
+	</dataset>
+	<dataset id="45">
+		<cityName>г. Москва</cityName>
+		<bar>330.80</bar>
+		<citizen>330.80</citizen>
+	</dataset>
+	<dataset id="86">
+		<cityName>Республика Карелия</cityName>
+		<bar>75.00</bar>
+		<citizen>75.00</citizen>
+	</dataset>
+	<dataset id="87">
+		<cityName>Республика Коми</cityName>
+		<bar>358.40</bar>
+		<citizen>358.40</citizen>
+	</dataset>
+	<dataset id="11">
+		<cityName>Архангельская область</cityName>
+		<bar>33.50</bar>
+		<citizen>33.50</citizen>
+	</dataset>
+	<dataset id="11100">
+		<cityName>Ненецкий автономный округ</cityName>
+		<bar>9050.40</bar>
+		<citizen>9050.40</citizen>
+	</dataset>
+	<dataset id="19">
+		<cityName>Вологодская область</cityName>
+		<bar>0.80</bar>
+		<citizen>0.80</citizen>
+	</dataset>
+	<dataset id="27">
+		<cityName>Калининградская область</cityName>
+		<bar>81.00</bar>
+		<citizen>81.00</citizen>
+	</dataset>
+	<dataset id="41">
+		<cityName>Ленинградская область</cityName>
+		<bar>222.00</bar>
+		<citizen>222.00</citizen>
+	</dataset>
+	<dataset id="47">
+		<cityName>Мурманская область</cityName>
+		<bar>4.70</bar>
+		<citizen>4.70</citizen>
+	</dataset>
+	<dataset id="49">
+		<cityName>Новгородская область</cityName>
+		<bar>257.70</bar>
+		<citizen>257.70</citizen>
+	</dataset>
+	<dataset id="58">
+		<cityName>Псковская область</cityName>
+		<bar>56.00</bar>
+		<citizen>56.00</citizen>
+	</dataset>
+	<dataset id="40">
+		<cityName>г. Санкт-Петербург</cityName>
+		<bar>0.00</bar>
+		<citizen>0.00</citizen>
+	</dataset>
+	<dataset id="79">
+		<cityName>Республика Адыгея</cityName>
+		<bar>52.00</bar>
+		<citizen>52.00</citizen>
+	</dataset>
+	<dataset id="85">
+		<cityName>Республика Калмыкия</cityName>
+		<bar>0.00</bar>
+		<citizen>0.00</citizen>
+	</dataset>
+	<dataset id="3">
+		<cityName>Краснодарский край</cityName>
+		<bar>40.00</bar>
+		<citizen>40.00</citizen>
+	</dataset>
+	<dataset id="12">
+		<cityName>Астраханская область</cityName>
+		<bar>4.50</bar>
+		<citizen>4.50</citizen>
+	</dataset>
+	<dataset id="18">
+		<cityName>Волгоградская область</cityName>
+		<bar>6.30</bar>
+		<citizen>6.30</citizen>
+	</dataset>
+	<dataset id="60">
+		<cityName>Ростовская область</cityName>
+		<bar>10.20</bar>
+		<citizen>10.20</citizen>
+	</dataset>
+	<dataset id="82">
+		<cityName>Республика Дагестан</cityName>
+		<bar>0.40</bar>
+		<citizen>0.40</citizen>
+	</dataset>
+	<dataset id="26">
+		<cityName>Республика Ингушетия</cityName>
+		<bar>0.00</bar>
+		<citizen>0.00</citizen>
+	</dataset>
+	<dataset id="83">
+		<cityName>Кабардино-Балкарская Республика</cityName>
+		<bar>0.00</bar>
+		<citizen>0.00</citizen>
+	</dataset>
+	<dataset id="91">
+		<cityName>Карачаево-Черкесская Республика</cityName>
+		<bar>0.00</bar>
+		<citizen>0.00</citizen>
+	</dataset>
+	<dataset id="90">
+		<cityName>Республика Северная Осетия-Алания</cityName>
+		<bar>0.00</bar>
+		<citizen>0.00</citizen>
+	</dataset>
+	<dataset id="96">
+		<cityName>Чеченская Республика</cityName>
+		<bar>0.00</bar>
+		<citizen>0.00</citizen>
+	</dataset>
+	<dataset id="7">
+		<cityName>Ставропольский край</cityName>
+		<bar>13.70</bar>
+		<citizen>13.70</citizen>
+	</dataset>
+	<dataset id="80">
+		<cityName>Республика Башкортостан</cityName>
+		<bar>15.20</bar>
+		<citizen>15.20</citizen>
+	</dataset>
+	<dataset id="88">
+		<cityName>Республика Марий Эл</cityName>
+		<bar>0.00</bar>
+		<citizen>0.00</citizen>
+	</dataset>
+	<dataset id="89">
+		<cityName>Республика Мордовия</cityName>
+		<bar>0.00</bar>
+		<citizen>0.00</citizen>
+	</dataset>
+	<dataset id="92">
+		<cityName>Республика Татарстан</cityName>
+		<bar>38.70</bar>
+		<citizen>38.70</citizen>
+	</dataset>
+	<dataset id="94">
+		<cityName>Удмуртская Республика</cityName>
+		<bar>15.20</bar>
+		<citizen>15.20</citizen>
+	</dataset>
+	<dataset id="97">
+		<cityName>Чувашская Республика</cityName>
+		<bar>68.60</bar>
+		<citizen>68.60</citizen>
+	</dataset>
+	<dataset id="57">
+		<cityName>Пермский край</cityName>
+		<bar>25.70</bar>
+		<citizen>25.70</citizen>
+	</dataset>
+	<dataset id="33">
+		<cityName>Кировская область</cityName>
+		<bar>16.90</bar>
+		<citizen>16.90</citizen>
+	</dataset>
+	<dataset id="22">
+		<cityName>Нижегородская область</cityName>
+		<bar>119.10</bar>
+		<citizen>119.10</citizen>
+	</dataset>
+	<dataset id="53">
+		<cityName>Оренбургская область</cityName>
+		<bar>67.80</bar>
+		<citizen>67.80</citizen>
+	</dataset>
+	<dataset id="56">
+		<cityName>Пензенская область</cityName>
+		<bar>2.60</bar>
+		<citizen>2.60</citizen>
+	</dataset>
+	<dataset id="36">
+		<cityName>Самарская область</cityName>
+		<bar>22.00</bar>
+		<citizen>22.00</citizen>
+	</dataset>
+	<dataset id="63">
+		<cityName>Саратовская область</cityName>
+		<bar>4.50</bar>
+		<citizen>4.50</citizen>
+	</dataset>
+	<dataset id="73">
+		<cityName>Ульяновская область</cityName>
+		<bar>34.20</bar>
+		<citizen>34.20</citizen>
+	</dataset>
+	<dataset id="37">
+		<cityName>Курганская область</cityName>
+		<bar>7.50</bar>
+		<citizen>7.50</citizen>
+	</dataset>
+	<dataset id="65">
+		<cityName>Свердловская область</cityName>
+		<bar>47.50</bar>
+		<citizen>47.50</citizen>
+	</dataset>
+	<dataset id="71">
+		<cityName>Тюменская область</cityName>
+		<bar>16.20</bar>
+		<citizen>16.20</citizen>
+	</dataset>
+	<dataset id="71100">
+		<cityName>Ханты-Мансийский автономный округ</cityName>
+		<bar>24.60</bar>
+		<citizen>24.60</citizen>
+	</dataset>
+	<dataset id="71140">
+		<cityName>Ямало-Ненецкий автономный округ</cityName>
+		<bar>17.80</bar>
+		<citizen>17.80</citizen>
+	</dataset>
+	<dataset id="75">
+		<cityName>Челябинская область</cityName>
+		<bar>3.50</bar>
+		<citizen>3.50</citizen>
+	</dataset>
+	<dataset id="84">
+		<cityName>Республика Алтай</cityName>
+		<bar>0.00</bar>
+		<citizen>0.00</citizen>
+	</dataset>
+	<dataset id="81">
+		<cityName>Республика Бурятия</cityName>
+		<bar>0.40</bar>
+		<citizen>0.40</citizen>
+	</dataset>
+	<dataset id="93">
+		<cityName>Республика Тыва</cityName>
+		<bar>17.30</bar>
+		<citizen>17.30</citizen>
+	</dataset>
+	<dataset id="95">
+		<cityName>Республика Хакасия</cityName>
+		<bar>110.80</bar>
+		<citizen>110.80</citizen>
+	</dataset>
+	<dataset id="1">
+		<cityName>Алтайский край</cityName>
+		<bar>15.90</bar>
+		<citizen>15.90</citizen>
+	</dataset>
+	<dataset id="76">
+		<cityName>Забайкальский край</cityName>
+		<bar>59.10</bar>
+		<citizen>59.10</citizen>
+	</dataset>
+	<dataset id="4">
+		<cityName>Красноярский край</cityName>
+		<bar>50.30</bar>
+		<citizen>50.30</citizen>
+	</dataset>
+	<dataset id="25">
+		<cityName>Иркутская область</cityName>
+		<bar>14.80</bar>
+		<citizen>14.80</citizen>
+	</dataset>
+	<dataset id="32">
+		<cityName>Кемеровская область</cityName>
+		<bar>18.00</bar>
+		<citizen>18.00</citizen>
+	</dataset>
+	<dataset id="50">
+		<cityName>Новосибирская область</cityName>
+		<bar>27.70</bar>
+		<citizen>27.70</citizen>
+	</dataset>
+	<dataset id="52">
+		<cityName>Омская область</cityName>
+		<bar>50.50</bar>
+		<citizen>50.50</citizen>
+	</dataset>
+	<dataset id="69">
+		<cityName>Томская область</cityName>
+		<bar>185.60</bar>
+		<citizen>185.60</citizen>
+	</dataset>
+	<dataset id="98">
+		<cityName>Республика Саха (Якутия)</cityName>
+		<bar>2.60</bar>
+		<citizen>2.60</citizen>
+	</dataset>
+	<dataset id="30">
+		<cityName>Камчатский край</cityName>
+		<bar>23.70</bar>
+		<citizen>23.70</citizen>
+	</dataset>
+	<dataset id="5">
+		<cityName>Приморский край</cityName>
+		<bar>26.20</bar>
+		<citizen>26.20</citizen>
+	</dataset>
+	<dataset id="8">
+		<cityName>Хабаровский край</cityName>
+		<bar>44.20</bar>
+		<citizen>44.20</citizen>
+	</dataset>
+	<dataset id="10">
+		<cityName>Амурская область</cityName>
+		<bar>252.70</bar>
+		<citizen>252.70</citizen>
+	</dataset>
+	<dataset id="44">
+		<cityName>Магаданская область</cityName>
+		<bar>0.00</bar>
+		<citizen>0.00</citizen>
+	</dataset>
+	<dataset id="64">
+		<cityName>Сахалинская область</cityName>
+		<bar>1592.20</bar>
+		<citizen>1592.20</citizen>
+	</dataset>
+	<dataset id="99">
+		<cityName>Еврейская автономная область</cityName>
+		<bar>91.20</bar>
+		<citizen>91.20</citizen>
+	</dataset>
+	<dataset id="77">
+		<cityName>Чукотский автономный округ</cityName>
+		<bar>478.30</bar>
+		<citizen>478.30</citizen>
+	</dataset>
+</chart>

@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<div class="container">
+    <div class="form-group">
+        <label class="control-label" for="input_quiry_string">Строка запроса</label>
+        <input type="search" class="form-control" id="input_quiry_string" placeholder="Введите текст" aria-describedby="input_quiry_success_status">
+        <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+        <span id="input_quiry_success_status" class="sr-only">(success)</span>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="input_path_string">Папка поиска</label>
+        <input type="text" class="form-control" id="input_path_string" placeholder="Введите путь папки поиска" aria-describedby="input_path_success_status" value="@Server.MapPath("~/Content/Root")">
+        <span class="glyphicon glyphicon-folder-open form-control-feedback" aria-hidden="true"></span>
+        <span id="input_path_success_status" class="sr-only">(success)</span>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" id="only_current"> Только в указанной папке (поиск во вложенных папках не производится)
+        </label>
+    </div>
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group">
+                <label class="control-label" for="input_datetime">Дата: </label>
+                <input type="date" class="form-control" id="input_datetime">
+            </div>
+            <label class="control-label" for="input_min_size">&nbsp;&nbsp;Размер файла: </label>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon glyphicon glyphicon-arrow-down"></span>
+                    <input type="number" class="form-control" id="input_min_size" min="0" max="2147483647">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon glyphicon glyphicon-arrow-up"></span>
+                    <input type="number" class="form-control" id="input_max_size" min="0" max="2147483647">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="input_txt">&nbsp;&nbsp;Формат файла: </label>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" checked="checked" disabled id="input_txt">.txt
+                    </label>
+                    <label>
+                        <input type="checkbox" id="input_xml">.xml
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+		<button id="button_submit_search" type="submit" class="btn btn-primary">Искать</button>
+        <button id="button_submit_search_stop" type="submit" class="btn btn-primary">Стоп</button>
+    </div>
+</div>
+<div><strong>Всего найдено: </strong><span id="search_result_count">0</span> <span id="search_result_state"></span></div>
+<table class="table table-striped">
+<thead>
+	<tr>
+		<th>№</th>
+		<th>Наименование</th>
+		<th>Путь</th>
+		<th>Размер (в байтах)</th>
+	</tr>
+</thead>
+	<tbody id="search_result">
+	</tbody>
+</table>

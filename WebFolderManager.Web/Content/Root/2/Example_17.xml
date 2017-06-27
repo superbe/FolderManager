@@ -1,0 +1,3950 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tip.Charts</name>
+    </assembly>
+    <members>
+        <member name="T:Tip.Charts.SeriesItem">
+            <summary>
+            Серии.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotOptionsBase">
+            <summary>
+            Базовый класс настройки графика
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.BaseClass">
+            <summary>
+            Базовый класс преобразования объектов в Json-представление.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.ToString">
+            <summary>
+            Преобразовать объект в Json-представление.
+            </summary>
+            <returns>Сериализованный объект в Json-представлении.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.GetAttributes">
+            <summary>
+            Получить преобразованную коллекцию свойств.
+            </summary>
+            <returns>Преобразованная коллекция свойств.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.GetValue(System.Object,System.Reflection.PropertyInfo)">
+            <summary>
+            Получить преобразованное свойство.
+            </summary>
+            <param name="value">Значение свойства объекта.</param>
+            <param name="info">Данные о свойстве объекта.</param>
+            <returns>Преобразованное свойство.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.GetArrayDecimal(System.Decimal[])">
+            <summary>
+            Преобразовать массив чисел в Json-представление.
+            </summary>
+            <param name="value">Массив чисел.</param>
+            <returns>Массив чисел в Json-представление.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.GetObject(System.Object,System.Reflection.PropertyInfo)">
+            <summary>
+            Преобразовать объект в Json-представление.
+            </summary>
+            <param name="value">Объект.</param>
+            <param name="info">Данные об объекте.</param>
+            <returns>Объект в Json-представление.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.GetArray(System.Object[])">
+            <summary>
+            Преобразовать массив в Json-представление.
+            </summary>
+            <param name="value">Массив.</param>
+            <returns>Массив в Json-представление.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.GetEnum(System.Enum,System.Reflection.PropertyInfo)">
+            <summary>
+            Преобразовать перечисление в Json-представление.
+            </summary>
+            <param name="value">Перечисление.</param>
+            <param name="info">Данные о перечислении.</param>
+            <returns>Перечисление в Json-представление.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.GetNumerical(System.Decimal,System.Reflection.PropertyInfo)">
+            <summary>
+            Преобразовать число в Json-представление.
+            </summary>
+            <param name="value">Число.</param>
+            <param name="info">Данные о числе.</param>
+            <returns>Число в Json-представление.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.GetColor(System.Drawing.Color,System.Reflection.PropertyInfo)">
+            <summary>
+            Преобразовать цвет в Json-представление.
+            </summary>
+            <param name="value">Цвет.</param>
+            <param name="info">Данные о цвете.</param>
+            <returns>Цвет в Json-представление.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.GetLiteral(System.String,System.Reflection.PropertyInfo)">
+            <summary>
+            Преобразовать строку в Json-представление.
+            </summary>
+            <param name="value">Строка.</param>
+            <param name="info">Данные о строке.</param>
+            <returns>Строка в Json-представление.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.IsLiteral(System.Reflection.PropertyInfo)">
+            <summary>
+            Проверить литеральный тип.
+            </summary>
+            <param name="info">Данные о строке.</param>
+            <returns>Результат проверки.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.GetLogical(System.Boolean,System.Reflection.PropertyInfo)">
+            <summary>
+            Преобразовать логическое значение в Json-представление.
+            </summary>
+            <param name="value">Логическое значение.</param>
+            <param name="info">Данные о логическом значении.</param>
+            <returns>Логическое значение. в Json-представление.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.GetDefaultColor(System.Reflection.PropertyInfo)">
+            <summary>
+            Получить значения цвета по умолчанию.
+            </summary>
+            <param name="info">Данные о цвете.</param>
+            <returns>Значения цвета по умолчанию.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.ColorTransition(System.String)">
+            <summary>
+            Преобразовать строковое представление цвета в объектное представление для схемы ARGB.
+            </summary>
+            <param name="getValue">Строковое представление цвета.</param>
+            <returns>Объектное представление цвета.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.GetDefaultLogical(System.Reflection.PropertyInfo)">
+            <summary>
+            Получить логическое значение по умолчанию.
+            </summary>
+            <param name="info">Данные о логическом значении.</param>
+            <returns>Логическое значение по умолчанию.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.GetDefaultNumerical(System.Reflection.PropertyInfo)">
+            <summary>
+            Получить числовое значение по умолчанию.
+            </summary>
+            <param name="info">Данные о числовом значении.</param>
+            <returns>Числовое значение по умолчанию.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.GetDefaultValue(System.Reflection.PropertyInfo)">
+            <summary>
+            Получить значение свойства по умолчанию.
+            </summary>
+            <param name="info">Данные о значение свойства.</param>
+            <returns>Значение свойства по умолчанию.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.GetAttributeInAJsonRepresentation(System.Reflection.PropertyInfo)">
+            <summary>
+            Получить наименование свойства в Json-представлении.
+            </summary>
+            <param name="info">Данные о свойстве.</param>
+            <returns>Наименование свойства в Json-представлении.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.ToLoweredName(System.String)">
+            <summary>
+            Спистить первую букуву строки в нижний регистр.
+            </summary>
+            <param name="infoName">Преобразуемая строка.</param>
+            <returns>Преобразованная строка.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.GetFormatter">
+            <summary>
+            Получить строку преобразования (форматтер) объекта в Json-представление.
+            </summary>
+            <returns>Строка преобразования (форматтер) объекта в Json-представление.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.isNullable(System.Reflection.PropertyInfo)">
+            <summary>
+            Получить указание на отображение пустого значения в Json-представлении.
+            </summary>
+            <param name="info">Данные о свойстве.</param>
+            <returns>Указание на отображение пустого значения в Json-представлении.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.CheckNumericalType(System.Object)">
+            <summary>
+            Проверить, что данный объект является числом.
+            </summary>
+            <param name="o">Проверяемый объект.</param>
+            <returns>Результат провеки.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseClass.IsNull">
+            <summary>
+            Нуль проверка.
+            </summary>
+            <returns>Результат проверки.</returns>
+        </member>
+        <member name="M:Tip.Charts.PlotOptionsBase.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.AllowPointSelect">
+            <summary>
+            Разрешить выделение.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.Animation">
+            <summary>
+            Разрешить анимацию.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.Color">
+            <summary>
+            Основной цвет серии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.ConnectNulls">
+            <summary>
+            Связывание настроек для всех серий.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.CropThreshold">
+            <summary>
+            Порог отрисовки точек графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.Cursor">
+            <summary>
+            Курсор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.DashStyle">
+            <summary>
+            Стиль линии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.DataLabels">
+            <summary>
+            Подписи к данным
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.EnableMouseTracking">
+            <summary>
+            Отслеживать мышой серии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.Events">
+            <summary>
+            События.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.Id">
+            <summary>
+            Идентификатор серии
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.LineWidth">
+            <summary>
+            Толщина линии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.Marker">
+            <summary>
+            Маркеры.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.Point">
+            <summary>
+            События точки графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.PointInterval">
+            <summary>
+            Расстояние между точками.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.PointStart">
+            <summary>
+            Начало отсчета.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.Selected">
+            <summary>
+            Разрешить выделение.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.Shadow">
+            <summary>
+            Отображать тени.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.ShowCheckbox">
+            <summary>
+            Отображать селектор
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.ShowInLegend">
+            <summary>
+            Отображать легенду.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.Stacking">
+            <summary>
+            Укладывать значения каждой серии друг на друга.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.States">
+            <summary>
+            Состояние графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.StickyTracking">
+            <summary>
+            Отслеживать события мыши.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.Tooltip">
+            <summary>
+            Настройка всплывающей подстказки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.TurboThreshold">
+            <summary>
+            Определенные разрешения, для больших массивов данных.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.Visible">
+            <summary>
+            Отображать график.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBase.ZIndex">
+            <summary>
+            Индекс серии.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.SeriesItem.#ctor">
+            <summary>
+            
+            </summary>
+            <code>
+            series: [{
+            data: "",
+            dataParser: ,
+            dataURL: null,
+            legendIndex: undefined,
+            name: "",
+            stack: null,
+            type: "line",
+            xAxis: 0,
+            yAxis: 0
+            }],
+            </code>
+        </member>
+        <member name="P:Tip.Charts.SeriesItem.Data">
+            <summary>
+            Данные серии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.SeriesItem.DataParser">
+            <summary>
+            Парсер данных. Зарезервировано. Не использовать.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.SeriesItem.DataURL">
+            <summary>
+            Урла данных. Зарезервировано. Не использовать.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.SeriesItem.LegendIndex">
+            <summary>
+            Индекс связанной легенды.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.SeriesItem.Name">
+            <summary>
+            Наименование серии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.SeriesItem.Stack">
+            <summary>
+            Идентификатор омета.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.SeriesItem.Type">
+            <summary>
+            Тип диаграммы.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.SeriesItem.XAxis">
+            <summary>
+            Индекс используемой оси.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.SeriesItem.YAxis">
+            <summary>
+            Индекс используемой оси.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotOptionsBar">
+            <summary>
+            Параметры для рейтинговых графиков.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.PlotOptionsBar.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBar.CropThreshold">
+            <summary>
+            Порог отрисовки точек графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBar.ShowInLegend">
+            <summary>
+            Отображать легенду.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBar.PointWidth">
+            <summary>
+            Величина точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBar.PointPadding">
+            <summary>
+            Отступ точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBar.MinPointLength">
+            <summary>
+            Минимальная величина точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBar.GroupPadding">
+            <summary>
+            Группа полей.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBar.ColorByPoint">
+            <summary>
+            Цвет точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBar.BorderColor">
+            <summary>
+            Цвет контура.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBar.BorderRadius">
+            <summary>
+            Радиус закругления контура.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsBar.BorderWidth">
+            <summary>
+            Толщина контура.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Weekdays">
+            <summary>
+            Наименования месяцев.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.BaseListClass`1">
+            <summary>
+            Базовый класс сериализации коллекций.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.BaseListClass`1.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.BaseListClass`1.ToString">
+            <summary>
+            Преобразовать коллекцию элементов в строку.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tip.Charts.BaseListClass`1.GetJoinLiteral">
+            <summary>
+            Получить литеральные значения сериализованные в строку.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tip.Charts.BaseListClass`1.GetValue(System.Int32)">
+            <summary>
+            Получить значение элемента коллекции.
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tip.Charts.BaseListClass`1.GetJoinString">
+            <summary>
+            Получить колллекцию элементов сериализованную в строку.
+            </summary>
+            <returns>Сериализованная колллекция элементов.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseListClass`1.GetFormatter">
+            <summary>
+            Получить строку преобразования (форматтер) объекта в Json-представление.
+            </summary>
+            <returns>Строка преобразования (форматтер) объекта в Json-представление.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseListClass`1.IsLiteral">
+            <summary>
+            Проверить литеральный тип.
+            </summary>
+            <returns>Результат проверки.</returns>
+        </member>
+        <member name="M:Tip.Charts.BaseListClass`1.GetCustomAttribute(System.Type)">
+            <summary>
+            Получить атрибуты класса.
+            </summary>
+            <param name="type">Тип атрибута.</param>
+            <returns>Атрибут.</returns>
+        </member>
+        <member name="T:Tip.Charts.LayoutType">
+            <summary>
+            Ориентация объекта.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.LayoutType.Horizontal">
+            <summary>
+            Горизонтальная.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.LayoutType.Vertical">
+            <summary>
+            Вертикальная.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.DataLabels">
+            <summary>
+            Метка точки данного.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.DataLabelsBase">
+            <summary>
+            Метка точки данного.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.DataLabelsBase.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DataLabelsBase.Align">
+            <summary>
+            Выравнивание.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DataLabelsBase.BackgroundColor">
+            <summary>
+            Цвет фона.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DataLabelsBase.BorderColor">
+            <summary>
+            Цвет рамки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DataLabelsBase.BorderRadius">
+            <summary>
+            Радиус уголков.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DataLabelsBase.BorderWidth">
+            <summary>
+            Толщина рамки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DataLabelsBase.Color">
+            <summary>
+            Цвет фона.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DataLabelsBase.Enabled">
+            <summary>
+            Доступность метки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DataLabelsBase.Formatter">
+            <summary>
+            Форматтер.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DataLabelsBase.Padding">
+            <summary>
+            Внутренние поля.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DataLabelsBase.Rotation">
+            <summary>
+            Вращение.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DataLabelsBase.Shadow">
+            <summary>
+            Величина тени.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DataLabelsBase.Style">
+            <summary>
+            Стили.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DataLabelsBase.X">
+            <summary>
+            Координата метки x.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DataLabelsBase.Y">
+            <summary>
+            Координата метки y.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.DataLabels.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DataLabels.Align">
+            <summary>
+            Выравнивание.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DataLabels.X">
+            <summary>
+            Координата метки x.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Data">
+            <summary>
+            Данные диаграммы.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Data.ToString">
+            <summary>
+            Преобразовать композитный объект данных в JSON-троку данных диаграммы.
+            </summary>
+            <returns>JSON-строка данных диаграммы.</returns>
+        </member>
+        <member name="M:Tip.Charts.Data.GetValue(System.Int32)">
+            <summary>
+            Привести объект к нужному типу и вернуть его строковое представление.
+            </summary>
+            <param name="index">Индекс приводимого объекта.</param>
+            <returns>Приведенное и отстроченное значение.</returns>
+        </member>
+        <member name="M:Tip.Charts.Data.CheckType(System.Int32)">
+            <summary>
+            Проверка типа данного.
+            </summary>
+            <param name="index">Данное.</param>
+            <returns>Соответствие проверке: true - правильное данное, false - нерпавильное данное.</returns>
+        </member>
+        <member name="T:Tip.Charts.Categories">
+            <summary>
+            Категории диаграммы HighCharts.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.YLabels">
+            <summary>
+            Vtnrf jcb f,cwbcc/
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.LabelsBase">
+            <summary>
+            Обобщенный класс метки оси.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.LabelsBase.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.LabelsBase.Align">
+            <summary>
+            Выравнивание по горизонтали.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.LabelsBase.Enabled">
+            <summary>
+            Отображаемость.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.LabelsBase.Formatter">
+            <summary>
+            Шаблон форматирования.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.LabelsBase.Rotation">
+            <summary>
+            Поворот.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.LabelsBase.StaggerLines">
+            <summary>
+            Количество осей. Только для горизонтальных осей.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.LabelsBase.Step">
+            <summary>
+            Шаг между осями.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.LabelsBase.Style">
+            <summary>
+            CSS-стиль.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.LabelsBase.X">
+            <summary>
+            Абсцисса метки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.LabelsBase.Y">
+            <summary>
+            Ордината метки.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.YLabels.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.YLabels.Align">
+            <summary>
+            Выравнивание по горизонтали.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.YLabels.X">
+            <summary>
+            Абсцисса метки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.YLabels.Y">
+            <summary>
+            Ордината метки.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Exporting">
+            <summary>
+            Настройки экспорта.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Exporting.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Exporting.Buttons">
+            <summary>
+            Кнопки
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Exporting.Enabled">
+            <summary>
+            Включили экупорт.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Exporting.EnableImages">
+            <summary>
+            Включили изображение.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Exporting.Filename">
+            <summary>
+            Наименование файла экспорта.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Exporting.Type">
+            <summary>
+            Мим тип файла экспорта.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Exporting.Url">
+            <summary>
+            Урла машины экспорта.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Exporting.Width">
+            <summary>
+            Ширина экспортируемой диаграммы.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Events">
+            <summary>
+            События.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.EventPointsType">
+            <summary>
+            Тип события точки.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventPointsType.Click">
+            <summary>
+            Событие нажатия левой кнопки мыши (Событие нажатия на элемент).
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventPointsType.MouseOver">
+            <summary>
+            Событие наведения курсора мыши на объекта.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventPointsType.MouseOut">
+            <summary>
+            Событие увода курсора мыши с объекта.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventPointsType.Remove">
+            <summary>
+            Событие перемещения.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventPointsType.Select">
+            <summary>
+            Событие выбора.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventPointsType.Unselect">
+            <summary>
+            Событие отмены выделения.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventPointsType.Update">
+            <summary>
+            Событие обновления данных.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventPointsType.LegendItemClick">
+            <summary>
+            Событие нажатия на легенду (для pie).
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.ButtonOptions">
+            <summary>
+            Настройка кнопок.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.ButtonOptions.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.Align">
+            <summary>
+            Выравнивание по горизонтали.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.BackgroundColor">
+            <summary>
+            Цвет фона.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.BorderColor">
+            <summary>
+            Цвет контура.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.BorderRadius">
+            <summary>
+            Радиус закругления контура на углах.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.BorderWidth">
+            <summary>
+            Толщина контура.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.Enabled">
+            <summary>
+            Включить кнопку.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.Height">
+            <summary>
+            Высока кнопки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.HoverBorderColor">
+            <summary>
+            Цвет контура наведения.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.HoverSymbolFill">
+            <summary>
+            Цвет заливки наведения.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.HoverSymbolStroke">
+            <summary>
+            Цвет заблокированного.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.Onclick">
+            <summary>
+            Функция нажатия.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.Symbol">
+            <summary>
+            Картинка фона кнопки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.SymbolFill">
+            <summary>
+            Заливка кнопки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.SymbolSize">
+            <summary>
+            Размер изображения кнопки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.SymbolStroke">
+            <summary>
+            Цвет заблокированного изображения.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.SymbolStrokeWidth">
+            <summary>
+            Толщина забьлокированного изображения кнопки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.SymbolX">
+            <summary>
+            Смешение по оси абсцисс от центра кнопки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.SymbolY">
+            <summary>
+            Смешение по оси ординат от центра кнопки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.VerticalAlign">
+            <summary>
+            Выравнивание по горизонтали.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.Width">
+            <summary>
+            Ширина кнопки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.X">
+            <summary>
+            Положение кнопки по оси X.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ButtonOptions.Y">
+            <summary>
+            Положение кнопки по оси Y.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.XAxisItem">
+            <summary>
+            Данные оси X.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.AxisItemBase">
+            <summary>
+            Данные оси X. Базовый класс.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.AxisItemBase.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.AllowDecimals">
+            <summary>
+            Шаг оси.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.AlternateGridColor">
+            <summary>
+            Цвет альтернативной строки
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.Categories">
+            <summary>
+            Категории оси X.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.DateTimeLabelFormats">
+            <summary>
+            Формат даты.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.EndOnTick">
+            <summary>
+            Шаг между делениями.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.Events">
+            <summary>
+            Обработчики событий.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.GridLineColor">
+            <summary>
+            Цвет линии уровня.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.GridLineDashStyle">
+            <summary>
+            Стиль линии уровня.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.GridLineWidth">
+            <summary>
+            Толщина линии уровня.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.Id">
+            <summary>
+            Идентификатор оси.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.LineColor">
+            <summary>
+            Цвет линии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.LineWidth">
+            <summary>
+            Толщина линии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.LinkedTo">
+            <summary>
+            Индекс линии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.Max">
+            <summary>
+            Максимальное количество осей.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.MaxPadding">
+            <summary>
+            Максимальный отступ.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.MaxZoom">
+            <summary>
+            Максимальный масштаб.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.Min">
+            <summary>
+            Минимальное количество линий.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.MinorGridLineColor">
+            <summary>
+            Цвет младшей линии сетки
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.MinorGridLineDashStyle">
+            <summary>
+            Стиль младшей линии сетки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.MinorGridLineWidth">
+            <summary>
+            Толщина младшей линии сетки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.MinorTickColor">
+            <summary>
+            Цвет младшей маркера деления.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.MinorTickInterval">
+            <summary>
+            Минимальный шаг между делениями.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.MinorTickLength">
+            <summary>
+            Величина (длина) младшего деления.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.MinorTickPosition">
+            <summary>
+            Положение младшего деления.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.MinorTickWidth">
+            <summary>
+            Толщина младшего деления.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.MinPadding">
+            <summary>
+            Минимальное внутреннее поле.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.MinRange">
+            <summary>
+            Минимальный уровень ранжирования.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.Offset">
+            <summary>
+            Величина смещения оси.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.Opposite">
+            <summary>
+            Обратить ось.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.PlotBands">
+            <summary>
+            Полосы графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.PlotLines">
+            <summary>
+            Линии графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.Reversed">
+            <summary>
+            Обратить ось.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.ShowFirstLabel">
+            <summary>
+            Отображать первую метку.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.ShowLastLabel">
+            <summary>
+            Отображать последнюю метку.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.StartOfWeek">
+            <summary>
+            Начинать неделю с...
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.StartOnTick">
+            <summary>
+            Начало деления.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.TickColor">
+            <summary>
+            Цвет деления.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.TickInterval">
+            <summary>
+            Расстояние между делениями.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.TickLength">
+            <summary>
+            Длина метки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.TickmarkPlacement">
+            <summary>
+            Расположение данных относительно делений.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.TickPixelInterval">
+            <summary>
+            Величина расстояния между делениями в пикселах.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.TickPosition">
+            <summary>
+            Положение делений относительно оси.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.TickWidth">
+            <summary>
+            Толщина деления.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisItemBase.Type">
+            <summary>
+            Тип оси.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.XAxisItem.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.XAxisItem.Labels">
+            <summary>
+            Метки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.XAxisItem.MaxPadding">
+            <summary>
+            Максимальный отступ.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.XAxisItem.MinPadding">
+            <summary>
+            Минимальное внутреннее поле.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.XAxisItem.Title">
+            <summary>
+            Заголовок  оси X.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Credits">
+            <summary>
+            Метка ссылкой на сайт разработчика.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Credits.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Credits.Enabled">
+            <summary>
+            Отображение метки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Credits.Position">
+            <summary>
+            Положение метки на диаграмме.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Credits.Href">
+            <summary>
+            Ссылка на сайт разработчика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Credits.Style">
+            <summary>
+            CSS-стили метки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Credits.Text">
+            <summary>
+            Текст метки.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Chart">
+            <summary>
+            Базовый класс.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Chart.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.AlignTicks">
+            <summary>
+            Совмещать оси.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.Animation">
+            <summary>
+            Анимация.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.BackgroundColor">
+            <summary>
+            Цвет фона.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.BorderColor">
+            <summary>
+            Цвет контура.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.BorderRadius">
+            <summary>
+            Радиус контура.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.BorderWidth">
+            <summary>
+            Толщина контура.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.ClassName">
+            <summary>
+            Наименование класса CSS.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.DefaultSeriesType">
+            <summary>
+            Тип серии по умолчанию.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.Events">
+            <summary>
+            События.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.Height">
+            <summary>
+            Высота.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.IgnoreHiddenSeries">
+            <summary>
+            Игнорировать скрытые серии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.Inverted">
+            <summary>
+            Изменить напраление осей.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.Margin">
+            <summary>
+            Внешние поля.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.MarginTop">
+            <summary>
+            Верхнее внешнее поле.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.MarginRight">
+            <summary>
+            Правое внешнее поле.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.MarginBottom">
+            <summary>
+            Нижнее внешнее поле.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.MarginLeft">
+            <summary>
+            Левое внешнее поле.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.PlotBackgroundColor">
+            <summary>
+            Цвет фона чертежа графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.PlotBackgroundImage">
+            <summary>
+            Заливка фона чертежа графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.PlotBorderColor">
+            <summary>
+            Цвет контура чертежа графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.PlotBorderWidth">
+            <summary>
+            Толщина контура чертежа графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.PlotShadow">
+            <summary>
+            Тень чертежа графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.Reflow">
+            <summary>
+            Разрешить перерисовку.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.RenderTo">
+            <summary>
+            Объект в который будет отрисована диаграмма.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.ResetZoomButton">
+            <summary>
+            Кнопка масштабирования.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.SelectionMarkerFill">
+            <summary>
+            Заливка маркера.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.Shadow">
+            <summary>
+            Показывать тени.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.ShowAxes">
+            <summary>
+            Показывать оси.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.SpacingTop">
+            <summary>
+            Верхний отступ.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.SpacingRight">
+            <summary>
+            Правый отступ.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.SpacingBottom">
+            <summary>
+            Нижний отступ.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.SpacingLeft">
+            <summary>
+            Левый отступ.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.Style">
+            <summary>
+            Общий стиль диаграмм.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.Type">
+            <summary>
+            Тип диаграммы.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.Width">
+            <summary>
+            Высота.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Chart.ZoomType">
+            <summary>
+            Тип масштабирования.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Labels">
+            <summary>
+            Метки, которые можно разместить на любом участке диаграммы.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Labels.Items">
+            <summary>
+            Коллекция меток.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Labels.Style">
+            <summary>
+            Стили меток.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.StackLabels">
+            <summary>
+            Метки стека.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotLinesLabel">
+            <summary>
+            Метка оси координат.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotLinesLabel.Align">
+            <summary>
+            Выравнивание по горизонтали.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotLinesLabel.Rotation">
+            <summary>
+            Поворот метки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotLinesLabel.Style">
+            <summary>
+            Стиль метки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotLinesLabel.TextAlign">
+            <summary>
+            Выключка текста.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotLinesLabel.VerticalAlign">
+            <summary>
+            Выравнивание по вертикали.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotLinesLabel.X">
+            <summary>
+            Ордината метки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotLinesLabel.Y">
+            <summary>
+            Абсцисса метки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.StackLabels.Enabled">
+            <summary>
+            Отображаемость и доступность.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.StackLabels.Formatter">
+            <summary>
+            Шаблон верстки, форматтер.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Buttons">
+            <summary>
+            Кнопки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Buttons.ExportButton">
+            <summary>
+            Кнопка экспорта.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Buttons.PrintButton">
+            <summary>
+            Кнопка печати.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.DateTimeLabelFormatsType">
+            <summary>
+            Шаблоны форматирования дат
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DateTimeLabelFormatsType.Second">
+            <summary>
+            Секунда.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DateTimeLabelFormatsType.Minute">
+            <summary>
+            Минута.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DateTimeLabelFormatsType.Hour">
+            <summary>
+            Час.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DateTimeLabelFormatsType.Day">
+            <summary>
+            День.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DateTimeLabelFormatsType.Week">
+            <summary>
+            Неделя.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DateTimeLabelFormatsType.Month">
+            <summary>
+            Месяц.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DateTimeLabelFormatsType.Year">
+            <summary>
+            Год.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.ResetZoomButton">
+            <summary>
+            Настройка кнопки сброса масштаба.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.ResetZoomButton.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ResetZoomButton.Position">
+            <summary>
+            Положение кнопки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ResetZoomButton.RelativeTo">
+            <summary>
+            Положение относительно какого объекта.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ResetZoomButton.Theme">
+            <summary>
+            Тема.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotOptionsScatter">
+            <summary>
+            Параметры для точечных графиков.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.PlotOptionsScatter.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsScatter.CropThreshold">
+            <summary>
+            Порог отрисовки точек графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsScatter.ShowInLegend">
+            <summary>
+            Отображать легенду.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PieDataLabels">
+            <summary>
+            Метка точки данного для круговой диаграммы.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.PieDataLabels.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PieDataLabels.Align">
+            <summary>
+            Выравнивание.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PieDataLabels.ConnectorColor">
+            <summary>
+            Цвет линии коннектора выноски (для Pie).
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PieDataLabels.ConnectorPadding">
+            <summary>
+            Поле подписи выноски (для Pie).
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PieDataLabels.ConnectorWidth">
+            <summary>
+            Ширина линии коннектора выноски (для Pie).
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PieDataLabels.Distance">
+            <summary>
+            Отступ подписи выноски (для Pie).
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PieDataLabels.SoftConnector">
+            <summary>
+            Гладкость линии коннектора выноски (для Pie).
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PieDataLabels.X">
+            <summary>
+            Координата метки x.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Months">
+            <summary>
+            Наименования месяцев.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.RelativeToType">
+            <summary>
+            Расположение кнопки масштабирования относительно.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.RelativeToType.Plot">
+            <summary>
+            Чертежа.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.RelativeToType.Chart">
+            <summary>
+            Диаграммы.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.YAxis">
+            <summary>
+            Коллекция осей ординат.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Highcharts">
+            <summary>
+            Диаграмма Highcharts.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.Chart">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.Colors">
+            <summary>
+            Цветовая схема.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.Credits">
+            <summary>
+            Метка разработчика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.Labels">
+            <summary>
+            Метки, которые можно разместить на любом участке диаграммы.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.Legend">
+            <summary>
+            Легенда.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.Loading">
+            <summary>
+            Настройка панели ожидания загрузки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.PlotOptions">
+            <summary>
+            Настройка данных данных графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.Point">
+            <summary>
+            Точка диаграммы.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.Series">
+            <summary>
+            Серии данных.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.Subtitle">
+            <summary>
+            Подзаголовок подписи.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.Symbols">
+            <summary>
+            Значки маркера.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.Title">
+            <summary>
+            Заголовок подписи.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.ToolTip">
+            <summary>
+            Всплывающая подсказка
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.XAxis">
+            <summary>
+            Настройка данных оси абсцисс.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.YAxis">
+            <summary>
+            Настройка данных оси ординат.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.Exporting">
+            <summary>
+            Настройки экспорта.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Highcharts.Navigation">
+            <summary>
+            Настройка навигации.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.LabelItem">
+            <summary>
+            Метка.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.LabelItem.Html">
+            <summary>
+            Html-разметка метки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.LabelItem.Style">
+            <summary>
+            Стили метки.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Common.Nullable">
+            <summary>
+            Нулевое или обнуляемое свойство.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Common.Nullable.#ctor(System.Boolean)">
+            <summary>
+            Конструктор.
+            </summary>
+            <param name="isNullable">Обнуленность.</param>
+        </member>
+        <member name="M:Tip.Charts.Common.Nullable.IsNullable">
+            <summary>
+            Получить значение обнуленности свойства.
+            </summary>
+            <returns>Обнуленность.</returns>
+        </member>
+        <member name="T:Tip.Charts.Common.DefaultColor">
+            <summary>
+            Атрибут задающий значение цвета по умолчания для свойства в Json.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Common.DefaultColor.#ctor(System.String,System.Boolean)">
+            <summary>
+            Конструктор.
+            </summary>
+            <param name="value">Отображаемое значение свойства в Json.</param>
+            <param name="fromArgb">Из Argb.</param>
+        </member>
+        <member name="M:Tip.Charts.Common.DefaultColor.GetValue">
+            <summary>
+            Получить отображаемое значение свойства в Json.
+            </summary>
+            <returns>Отображаемое значение свойства в Json.</returns>
+        </member>
+        <member name="P:Tip.Charts.Common.DefaultColor.FromArgb">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotOptionsSeries">
+            <summary>
+            Общие параметры для всех типов графиков.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.PlotOptionsSeries.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsSeries.CropThreshold">
+            <summary>
+            Порог отрисовки точек графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsSeries.ShowInLegend">
+            <summary>
+            Отображать легенду.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotOptionsSpline">
+            <summary>
+            Параметры для сглаженных графиков.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.PlotOptionsSpline.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsSpline.CropThreshold">
+            <summary>
+            Порог отрисовки точек графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsSpline.ShowInLegend">
+            <summary>
+            Отображать легенду.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotOptionsAreaSpline">
+            <summary>
+            Параметры для сглаженных гистограмм графиков.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.PlotOptionsAreaSpline.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsAreaSpline.CropThreshold">
+            <summary>
+            Порог отрисовки точек графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsAreaSpline.ShowInLegend">
+            <summary>
+            Отображать легенду.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsAreaSpline.Threshold">
+            <summary>
+            Величина сдвига оси ординат.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsAreaSpline.LineColor">
+            <summary>
+            Цвет линии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsAreaSpline.FillColor">
+            <summary>
+            Цвет заливки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsAreaSpline.FillOpacity">
+            <summary>
+            Прозрачность.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Global">
+            <summary>
+            Общие настройки диаграммы.
+            </summary>
+            <code>
+            Highcharts.setOptions({
+            	global: {
+            		useUTC: false
+            	}
+            });
+            </code>
+            <remarks>
+            Устанавливаются вне главного объекта для всех диаграмм.
+            </remarks>
+        </member>
+        <member name="M:Tip.Charts.Global.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Global.CanvasToolsURL">
+            <summary>
+            Ссылка на скрипт для Android 2.x для поддержки SVG
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Global.UseUTC">
+            <summary>
+            Использовать UTC настройки даты.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Common.Literal">
+            <summary>
+            Задает литеральный тип.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Common.Literal.#ctor(System.Boolean)">
+            <summary>
+            Конструктор.
+            </summary>
+            <param name="isLiteral">Признак типа.</param>
+        </member>
+        <member name="M:Tip.Charts.Common.Literal.IsLiteral">
+            <summary>
+            Получить значение принадлежности литеральному типу.
+            </summary>
+            <returns>Возвращаемое значение: true - тип литеральный, false - простая строка.</returns>
+        </member>
+        <member name="T:Tip.Charts.Position">
+            <summary>
+            Положение объекта на диаграмме.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Position.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Position.Align">
+            <summary>
+            Выравнивание по краю по горизонтали.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Position.VerticalAlign">
+            <summary>
+            Выравнивание по краю по вертикали.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Position.X">
+            <summary>
+            Сдвиг от исходного положения по горизонтали.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Position.Y">
+            <summary>
+            Сдвиг от исходного положения по вертикали.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.StatesHover">
+            <summary>
+            Маркер состояния.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.StatesHover.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.StatesHover.Enabled">
+            <summary>
+            Доступность маркера точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.StatesHover.LineWidth">
+            <summary>
+            Толщина контура маркера точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.StatesHover.Marker">
+            <summary>
+            Маркет состояния.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.YAxisItem">
+            <summary>
+            Ось ординат.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.YAxisItem.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.YAxisItem.Labels">
+            <summary>
+            Метки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.YAxisItem.MaxPadding">
+            <summary>
+            Максимальный отступ.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.YAxisItem.MinPadding">
+            <summary>
+            Минимальное внутреннее поле.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.YAxisItem.StackLabels">
+            <summary>
+            Метки стека.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.YAxisItem.Title">
+            <summary>
+            Подпись к оси ординат.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotOptionsPie">
+            <summary>
+            Параметры для круговых диаграмм.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.PlotOptionsPie.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsPie.CropThreshold">
+            <summary>
+            Порог отрисовки точек графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsPie.ShowInLegend">
+            <summary>
+            Отображать легенду.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsPie.Size">
+            <summary>
+            Размер.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsPie.SliceOffset">
+            <summary>
+            Смещение.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsPie.InnerSize">
+            <summary>
+            Внутренний размер.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsPie.BorderColor">
+            <summary>
+            Цвет рамки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsPie.BorderWidth">
+            <summary>
+            Толщина рамки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsPie.Center">
+            <summary>
+            Положение центра.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsPie.DataLabels">
+            <summary>
+            Подписи к данным
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Legend">
+            <summary>
+            Легенда.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Legend.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.Align">
+            <summary>
+            Выравнивание по центру.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.BackgroundColor">
+            <summary>
+            Цвет фона ленгенды.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.BorderColor">
+            <summary>
+            Цвет шрифта легенды.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.BorderRadius">
+            <summary>
+            Радиус контура легенды.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.BorderWidth">
+            <summary>
+            Толщина контура легенды.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.Enabled">
+            <summary>
+            Отображать легенду.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.Floating">
+            <summary>
+            Плавающая легенда.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.ItemhHiddenStyle">
+            <summary>
+            Стиль скрытых элементов.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.ItemHoverStyle">
+            <summary>
+            Стиль захваченного элемента.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.ItemStyle">
+            <summary>
+            Стиль элемента легенды.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.ItemWidth">
+            <summary>
+            Ширина элемента легенды.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.Layout">
+            <summary>
+            Ориентация легенды. 
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.LabelFormatter">
+            <summary>
+            Форматтер метки легенды.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.LineHeight">
+            <summary>
+            Величина пробельного элемента.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.Margin">
+            <summary>
+            Внешние поля.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.Reversed">
+            <summary>
+            Обратный порядок точек серий объектов в легенде.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.Rtl">
+            <summary>
+            Направление отображения текста (для арабов и прочих).
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.Shadow">
+            <summary>
+            Отображать тень.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.Style">
+            <summary>
+            Стиль легенды.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.SymbolPadding">
+            <summary>
+            Внутренние поля.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.SymbolWidth">
+            <summary>
+            Ширина текста.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.VerticalAlign">
+            <summary>
+            Выравнивание текста.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.Width">
+            <summary>
+            Ширина легенды.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.X">
+            <summary>
+            Абсцисса легенды.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Legend.Y">
+            <summary>
+            Ордината легенды.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Crosshairs">
+            <summary>
+            Данные линий перекрестья.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Crosshairs.GetStringFromHorizontal">
+            <summary>
+            Получить строковое представление для горизонтальной линии.
+            </summary>
+            <returns>Строковое представление для горизонтальной линии.</returns>
+        </member>
+        <member name="M:Tip.Charts.Crosshairs.GetStringFromVertical">
+            <summary>
+            Получить строковое представление для вертикальной линии.
+            </summary>
+            <returns>Строковое представление для вертикальной линии.</returns>
+        </member>
+        <member name="M:Tip.Charts.Crosshairs.ToString">
+            <summary>
+            Получить строковое представление перекрестных линий.
+            </summary>
+            <returns>Строковое представление перекрестных линий.</returns>
+        </member>
+        <member name="P:Tip.Charts.Crosshairs.Horizontal">
+            <summary>
+            Горизонательная линия перекрестья.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Crosshairs.Vertical">
+            <summary>
+            Вертикальная линия перекрестья.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Lang">
+            <summary>
+            Настройки языка.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Lang.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Lang.DecimalPoint">
+            <summary>
+            Разделитель десятичных чисел.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Lang.DownloadPNG">
+            <summary>
+            Наименование меню экспорта в PNG.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Lang.DownloadJPEG">
+            <summary>
+            Наименование меню экспорта в JPEG.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Lang.DownloadPDF">
+            <summary>
+            Наименование меню экспорта в PDF.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Lang.DownloadSVG">
+            <summary>
+            Наименование меню экспорта в SVG.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Lang.ExportButtonTitle">
+            <summary>
+            Тест всплывающей подсказки экспорта диаграммы.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Lang.Loading">
+            <summary>
+            Текст панели ожидания окончания загрузки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Lang.Months">
+            <summary>
+            Наименования месяцев.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Lang.ShortMonths">
+            <summary>
+            Краткое наименование месяцев.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Lang.PrintButtonTitle">
+            <summary>
+            Тест всплывающей подсказки печати.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Lang.ResetZoom">
+            <summary>
+            Надпись кнопки привидения масштаба к исходному состоянию.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Lang.ResetZoomTitle">
+            <summary>
+            Тест всплывающей подсказки кнопки привидения масштаба к исходному состоянию.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Lang.ThousandsSep">
+            <summary>
+            Разделитель разрядов.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Lang.Weekdays">
+            <summary>
+            Наименования дней недели.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Colors">
+            <summary>
+            Цветовая схема чарта.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Colors.GetValue(System.Int32)">
+            <summary>
+            Получить значение элемента коллекции.
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Tip.Charts.PrintButton">
+            <summary>
+            Кнопка печати.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PrintButton.Symbol">
+            <summary>
+            Картинка фона кнопки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PrintButton.X">
+            <summary>
+            Положение кнопки по оси X.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.EventPlotsType">
+            <summary>
+            Событие примитива.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventPlotsType.Click">
+            <summary>
+            Нажатия.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventPlotsType.MouseOver">
+            <summary>
+            Наведения курсора мыши.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventPlotsType.MouseOut">
+            <summary>
+            Увода курсора мыши.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventPlotsType.MouseMove">
+            <summary>
+            Перемещения мыши по примитиву.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Attributes">
+            <summary>
+            Атрибуты, передаваемые в функцию JavaScript.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Symbols">
+            <summary>
+            Значки маркера.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.AxisType">
+            <summary>
+            Тип оси.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.AxisType.Linear">
+            <summary>
+            Линейный.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.AxisType.Logarithmic">
+            <summary>
+            Логарифмический.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.AxisType.Datetime">
+            <summary>
+            Временной.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.XAxisTitle">
+            <summary>
+            Подпись абсциссы.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.AxisTitle">
+            <summary>
+            Подписи осей координат.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.TitleBasicSettings">
+            <summary>
+            Базовый класс подписи диаграммы.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.TitleBasicSettings.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.TitleBasicSettings.Align">
+            <summary>
+            Выравнивание по горизонтали.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.TitleBasicSettings.Floating">
+            <summary>
+            Плавающий заголовок.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.TitleBasicSettings.Text">
+            <summary>
+            Текст подписи.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.TitleBasicSettings.Style">
+            <summary>
+            CSS стили.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.TitleBasicSettings.VerticalAlign">
+            <summary>
+            Вертикальное выравнивание.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.TitleBasicSettings.X">
+            <summary>
+            Абсцисса подписи.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.TitleBasicSettings.Y">
+            <summary>
+            Ордината подписи.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisTitle.Floating">
+            <summary>
+            Закрыли плавающий заголовок.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisTitle.VerticalAlign">
+            <summary>
+            Закрыли выравнивание по вертикали.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisTitle.X">
+            <summary>
+            Закрыли абсциссу.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisTitle.Y">
+            <summary>
+            Закрыли ординату.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisTitle.Margin">
+            <summary>
+            Отступ от оси.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisTitle.Offset">
+            <summary>
+            Расстоянгие до оси.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.AxisTitle.Rotation">
+            <summary>
+            Поворот.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.XAxisTitle.Enabled">
+            <summary>
+            Отображаем титлу.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.XAxisTitle.Margin">
+            <summary>
+            Отступ от оси.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.XAxisTitle.Rotation">
+            <summary>
+            Поворот.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.XAxisTitle.Text">
+            <summary>
+            Текст подписи.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotOptionsArea">
+            <summary>
+            Параметры для гистограмм графиков.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.PlotOptionsArea.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsArea.CropThreshold">
+            <summary>
+            Порог отрисовки точек графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsArea.ShowInLegend">
+            <summary>
+            Отображать легенду.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsArea.Threshold">
+            <summary>
+            Величина сдвига оси ординат.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsArea.LineColor">
+            <summary>
+            Цвет линии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsArea.FillColor">
+            <summary>
+            Цвет заливки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsArea.FillOpacity">
+            <summary>
+            Прозрачность.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.SetOptions">
+            <summary>
+            Настройки чартов.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.SetOptions.Global">
+            <summary>
+            Глобальные настройки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.SetOptions.Lang">
+            <summary>
+            Настройки языка.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.EventAxiesType">
+            <summary>
+            Событие координат.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventAxiesType.SetExtremes">
+            <summary>
+            Нахождения экстремума.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Common.Formatter">
+            <summary>
+            Форматтер класса.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Common.Formatter.#ctor(System.String)">
+            <summary>
+            Конструктор.
+            </summary>
+            <param name="formatString">Строка форматирования.</param>
+        </member>
+        <member name="M:Tip.Charts.Common.Formatter.GetFormatString">
+            <summary>
+            Получить строку форматирования.
+            </summary>
+            <returns>Строка форматирования.</returns>
+        </member>
+        <member name="T:Tip.Charts.Common.DefaultLogical">
+            <summary>
+            Атрибут задающий значение по умолчания для свойства в Json.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Common.DefaultLogical.#ctor(System.Boolean)">
+            <summary>
+            Конструктор.
+            </summary>
+            <param name="value">Отображаемое значение свойства в Json.</param>
+        </member>
+        <member name="M:Tip.Charts.Common.DefaultLogical.GetValue">
+            <summary>
+            Получить отображаемое значение свойства в Json.
+            </summary>
+            <returns>Отображаемое значение свойства в Json.</returns>
+        </member>
+        <member name="T:Tip.Charts.StackingType">
+            <summary>
+            Как укладывать занчения каждой серии друг на друга.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.StackingType.Percent">
+            <summary>
+            Проценты.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.StackingType.Normal">
+            <summary>
+            Нормально.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.StackingType.Null">
+            <summary>
+            Отключено.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotLinesItem">
+            <summary>
+            Параллельная линия выделения по всей длине.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.PlotLinesItem.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotLinesItem.Color">
+            <summary>
+            Цвет линии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotLinesItem.DashStyle">
+            <summary>
+            Стиль линии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotLinesItem.Events">
+            <summary>
+            События.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotLinesItem.Id">
+            <summary>
+            Идентификатор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotLinesItem.Label">
+            <summary>
+            Метки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotLinesItem.Value">
+            <summary>
+            Значение отступа отоси.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotLinesItem.Width">
+            <summary>
+            Толщина линии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotLinesItem.ZIndex">
+            <summary>
+            Порядок следования.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Complex">
+            <summary>
+            Составное данное.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.Complex._type">
+            <summary>
+            Тип данного
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.Complex._firstdate">
+            <summary>
+            Первое значение данного.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.Complex._first">
+            <summary>
+            Первое значение данного.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.Complex._second">
+            <summary>
+            Второе значение данного.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Complex.#ctor(System.Decimal,System.Decimal)">
+            <summary>
+            Конструктор. Первая перегрузка.
+            </summary>
+            <param name="first">Первое значение данного.</param>
+            <param name="second">Второе значение данного.</param>
+        </member>
+        <member name="M:Tip.Charts.Complex.#ctor(System.String,System.Decimal)">
+            <summary>
+            Конструктор. Вторая перегрузка.
+            </summary>
+            <param name="first">Первое значение данного.</param>
+            <param name="second">Второе значение данного.</param>
+        </member>
+        <member name="M:Tip.Charts.Complex.#ctor(System.DateTime,System.Decimal)">
+            <summary>
+            Конструктор. Третья перегрузка.
+            </summary>
+            <param name="first">Первое значение данного.</param>
+            <param name="second">Второе значение данного.</param>
+        </member>
+        <member name="M:Tip.Charts.Complex.#ctor(System.DateTime,System.Double)">
+            <summary>
+            Конструктор. Четвертая перегрузка.
+            </summary>
+            <param name="first"></param>
+            <param name="second"></param>
+        </member>
+        <member name="M:Tip.Charts.Complex.#ctor(System.DateTime,System.Int32)">
+            <summary>
+            Конструктор. Пятая перегрузка.
+            </summary>
+            <param name="first"></param>
+            <param name="second"></param>
+        </member>
+        <member name="M:Tip.Charts.Complex.#ctor(System.Double,System.Double)">
+            <summary>
+            Конструктор. Шестая перегрузка.
+            </summary>
+            <param name="first"></param>
+            <param name="second"></param>
+        </member>
+        <member name="M:Tip.Charts.Complex.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Конструктор. Седьмая перегрузка.
+            </summary>
+            <param name="first"></param>
+            <param name="second"></param>
+        </member>
+        <member name="M:Tip.Charts.Complex.ToString">
+            <summary>
+            Преобразовать составное данное в Json-строку.
+            </summary>
+            <returns>Json-строка составного данного.</returns>
+        </member>
+        <member name="M:Tip.Charts.Complex.GetFirstData">
+            <summary>
+            Преобразовать первое значение данного в Json-строку.
+            </summary>
+            <returns>Json-строка первого значения данного.</returns>
+        </member>
+        <member name="P:Tip.Charts.Complex.Second">
+            <summary>
+            Второе значение данного.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Complex.First">
+            <summary>
+            Первое значение данного.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.BarDataLabels">
+            <summary>
+            Метка точки данного для рейтинга.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.BarDataLabels.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.BarDataLabels.Align">
+            <summary>
+            Выравнивание.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.BarDataLabels.X">
+            <summary>
+            Координата метки x.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.MarkerStatesHover">
+            <summary>
+            Состояние выделения маркера.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.MarkerStatesBase">
+            <summary>
+            Базовый класс состояния маркера.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.MarkerStatesBase.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.MarkerStatesBase.Enabled">
+            <summary>
+            Доступность маркера точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.MarkerStatesBase.FillColor">
+            <summary>
+            Заливка маркера точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.MarkerStatesBase.LineColor">
+            <summary>
+            Цвет контура маркера точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.MarkerStatesBase.LineWidth">
+            <summary>
+            Толщина контура маркера точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.MarkerStatesBase.Radius">
+            <summary>
+            Радиус маркера.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.MarkerStatesBase.Symbol">
+            <summary>
+            Символ маркера.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.MarkerStatesHover.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.MarkerStatesHover.LineColor">
+            <summary>
+            Цвет контура маркера точки.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotBandsLabel">
+            <summary>
+            Метка точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotBandsLabel.Text">
+            <summary>
+            Подпись.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotBandsItem">
+            <summary>
+            Полоса.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotBandsItem.Color">
+            <summary>
+            Цвет линии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotBandsItem.Events">
+            <summary>
+            События.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotBandsItem.From">
+            <summary>
+            Значение отступа от оси.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotBandsItem.Id">
+            <summary>
+            Идентификатор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotBandsItem.Label">
+            <summary>
+            Метки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotBandsItem.To">
+            <summary>
+            Толщина линии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotBandsItem.ZIndex">
+            <summary>
+            Порядок следования.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Navigation">
+            <summary>
+            Настройка навигации.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Navigation.MenuStyle">
+            <summary>
+            CSS стиль меню.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Navigation.MenuItemStyle">
+            <summary>
+            CSS стиль элемента меню.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Navigation.MenuItemHoverStyle">
+            <summary>
+            CSS стиль меню на которое навели курсор мыши.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Navigation.ButtonOptions">
+            <summary>
+            Настройки кнопки.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Common.DefaultValue">
+            <summary>
+            Атрибут задающий значение по умолчания для свойства в Json.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Common.DefaultValue.#ctor(System.Object)">
+            <summary>
+            Конструктор.
+            </summary>
+            <param name="value">Отображаемое значение свойства в Json.</param>
+        </member>
+        <member name="M:Tip.Charts.Common.DefaultValue.GetValue">
+            <summary>
+            Получить отображаемое значение свойства в Json.
+            </summary>
+            <returns>Отображаемое значение свойства в Json.</returns>
+        </member>
+        <member name="T:Tip.Charts.Loading">
+            <summary>
+            Настройка панели ожидания экспорта.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Loading.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Loading.HideDuration">
+            <summary>
+            Задержка сокрытия панели ожидания экспорта.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Loading.LabelStyle">
+            <summary>
+            CSS стили надписи.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Loading.ShowDuration">
+            <summary>
+            Задержка отображения панели ожидания экспорта.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Loading.Style">
+            <summary>
+            CSS стили панели ожидания экспорта..
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.TextAlignType">
+            <summary>
+            Выключка текста.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.TextAlignType.Left">
+            <summary>
+            Влево.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.TextAlignType.Center">
+            <summary>
+            По центру.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.TextAlignType.Right">
+            <summary>
+            Вправо.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Title">
+            <summary>
+            Заголовок подписи диаграммы.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Title.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Title.Margin">
+            <summary>
+            Внешние поля.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Title.Text">
+            <summary>
+            Текст заголовка подписи.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Title.Y">
+            <summary>
+            Ордината заголовка подписи.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.ShortMonths">
+            <summary>
+            Наименования месяцев.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.LabelItems">
+            <summary>
+            Коллекция меток.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.ExportButton">
+            <summary>
+            Кнопка экспорта.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ExportButton.MenuItems">
+            <summary>
+            Меню кнопки экспорта.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ExportButton.Symbol">
+            <summary>
+            Картинка фона кнопки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ExportButton.X">
+            <summary>
+            Положение кнопки по оси X.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.DashStyleType">
+            <summary>
+            Стиль линии.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DashStyleType.Solid">
+            <summary>
+            Линия.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DashStyleType.ShortDash">
+            <summary>
+            Короткое тире.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DashStyleType.ShortDot">
+            <summary>
+            Частый пунктир.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DashStyleType.ShortDashDot">
+            <summary>
+            Короткий штрих-пунктир.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DashStyleType.ShortDashDotDot">
+            <summary>
+            Короткий штрих-двойной пунктир.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DashStyleType.Dot">
+            <summary>
+            Пунктир.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DashStyleType.Dash">
+            <summary>
+            Штрих.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DashStyleType.LongDash">
+            <summary>
+            Длинный штрих.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DashStyleType.DashDot">
+            <summary>
+            Длинный пунктир.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DashStyleType.LongDashDot">
+            <summary>
+            Длинный штрих-пунктир.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DashStyleType.LongDashDotDot">
+            <summary>
+            Длинный штрих-двойной пунктир.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.DashStyleType.None">
+            <summary>
+            Нет линии.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.States">
+            <summary>
+            Состояния маркера точки диаграммы.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.States.Hover">
+            <summary>
+            Настройка захваченного маркера точки.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.EventChartType">
+            <summary>
+            Общие события диагрммы.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventChartType.AddSeries">
+            <summary>
+            Добавления серии.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventChartType.Click">
+            <summary>
+            Нажатия на диаграмму.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventChartType.Load">
+            <summary>
+            Загрузки.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventChartType.Redraw">
+            <summary>
+            Перерисовки.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventChartType.Selection">
+            <summary>
+            Выделения.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Common.JsonName">
+            <summary>
+            Атрибут задающий отображение имени свойства в Json.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Common.JsonName.#ctor(System.String)">
+            <summary>
+            Конструктор.
+            </summary>
+            <param name="name">Отображаемое имя свойства в Json.</param>
+        </member>
+        <member name="M:Tip.Charts.Common.JsonName.GetName">
+            <summary>
+            Получить отображаемое имя свойства в Json.
+            </summary>
+            <returns>Отображаемое имя свойства в Json.</returns>
+        </member>
+        <member name="T:Tip.Charts.VerticalAlignType">
+            <summary>
+            Вертикальное выравнивание.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.VerticalAlignType.Top">
+            <summary>
+            Вырвнивание по верхнему краю.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.VerticalAlignType.Middle">
+            <summary>
+            Выравнивание по середине.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.VerticalAlignType.Bottom">
+            <summary>
+            Выравнивание по нижнему краю.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.ToolTip">
+            <summary>
+            Всплывающая подсказка.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.ToolTip.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.BackgroundColor">
+            <summary>
+            Цвет фона.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.BorderColor">
+            <summary>
+            Цвет рамки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.BorderRadius">
+            <summary>
+            Радиус рамки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.BorderWidth">
+            <summary>
+            Толщина рамки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.Crosshairs">
+            <summary>
+            Данные линий- перекрестий
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.Enabled">
+            <summary>
+            Элемент включен ли.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.HeaderFormat">
+            <summary>
+            Формат заголовка.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.FooterFormat">
+            <summary>
+            Формат нижнего колонтитула.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.Formatter">
+            <summary>
+            Форматтер.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.PointFormat">
+            <summary>
+            Формат точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.Shadow">
+            <summary>
+            Отображать тень.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.Shared">
+            <summary>
+            Всплывающая подстказка двигается.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.Snap">
+            <summary>
+            Величина скученности точек.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.Style">
+            <summary>
+            Стили всплывающей подстказки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.ValueDecimals">
+            <summary>
+            Значение точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.ValuePrefix">
+            <summary>
+            Значение префикса.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.ValueSuffix">
+            <summary>
+            Знеачение суффикса.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.XDateFormat">
+            <summary>
+            Формат даты во всплывающей подсказке.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.ToolTip.UseHTML">
+            <summary>
+            Рендерить разметку HTML в SVG.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PointEvents">
+            <summary>
+            События точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PointEvents.Events">
+            <summary>
+            События точки.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotOptionsLine">
+            <summary>
+            Параметры для линейных графиков.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.PlotOptionsLine.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsLine.CropThreshold">
+            <summary>
+            Порог отрисовки точек графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsLine.ShowInLegend">
+            <summary>
+            Отображать легенду.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsLine.Step">
+            <summary>
+            Шаг отрисовки точек.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Marker">
+            <summary>
+            Класс маркера диаграммы.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Marker.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Marker.Enabled">
+            <summary>
+            Доступность маркера точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Marker.FillColor">
+            <summary>
+            Заливка маркера точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Marker.LineColor">
+            <summary>
+            Цвет контура маркера точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Marker.LineWidth">
+            <summary>
+            Толщина контура маркера точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Marker.Radius">
+            <summary>
+            Радиус маркера.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Marker.States">
+            <summary>
+            Состояние маркера точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Marker.Symbol">
+            <summary>
+            Фигура (символ) отображения маркера точки.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.StatesHoverMarker">
+            <summary>
+            Маркер состояния
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.StatesHoverMarker.States">
+            <summary>
+            Закрыли свойство.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.MarkerStatesSelect">
+            <summary>
+            Состояние наведения на маркер.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.MarkerStatesSelect.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.MarkerStatesSelect.LineColor">
+            <summary>
+            Цвет контура маркера точки.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.XLabels">
+            <summary>
+            Метка оси обсциисс.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.XLabels.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.XLabels.Align">
+            <summary>
+            Выравнивание по горизонтали.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.XLabels.X">
+            <summary>
+            Абсцисса метки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.XLabels.Y">
+            <summary>
+            Ордината метки.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.TickPositionType">
+            <summary>
+            Положение деления относительно оси.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.TickPositionType.Outside">
+            <summary>
+            Вне.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.TickPositionType.Inside">
+            <summary>
+            Внутри.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.YAxisTitle">
+            <summary>
+            Подпись ординаты.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.YAxisTitle.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.YAxisTitle.Margin">
+            <summary>
+            Отступ от оси.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.YAxisTitle.Rotation">
+            <summary>
+            Текст подписи.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.YAxisTitle.Text">
+            <summary>
+            Поворот.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Subtitle">
+            <summary>
+            Подзаголовок подписи диаграммы.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Subtitle.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Subtitle.Text">
+            <summary>
+            Текст подзаголовка подписи.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Subtitle.Y">
+            <summary>
+            Ордината подзаголовка подписи.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Series">
+            <summary>
+            Серии.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Point">
+            <summary>
+            Данные точки диаграммы.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Point.Color">
+            <summary>
+            Значение цвета.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Point.DataLabels">
+            <summary>
+            Метка данного.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Point.Events">
+            <summary>
+            События.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Point.Id">
+            <summary>
+            Идентификатор данного.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Point.Marker">
+            <summary>
+            Маркер точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Point.Selected">
+            <summary>
+            Идентификатор данного.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Point.LegendIndex">
+            <summary>
+            Идентификатор данного.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Point.Name">
+            <summary>
+            Наименование данного.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Point.Sliced">
+            <summary>
+            В нарезку.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Point.X">
+            <summary>
+            Значение по координате x.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Point.Y">
+            <summary>
+            Значение по координате y.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Center">
+            <summary>
+            Центр круговой диаграммы.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.TickMarkPlacementType">
+            <summary>
+            Расположение данных относительно делений.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.TickMarkPlacementType.Between">
+            <summary>
+            Точки данных располоагаются между делениями.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.TickMarkPlacementType.On">
+            <summary>
+            Включено (точки располагаются над делениями).
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.TickMarkPlacementType.Off">
+            <summary>
+            Выключено.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.FirstNumericType">
+            <summary>
+            Тип данного.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.FirstNumericType.Numeric">
+            <summary>
+            Числовой.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.FirstNumericType.String">
+            <summary>
+            Строковый.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.FirstNumericType.DateTime">
+            <summary>
+            Времени.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.AlignType">
+            <summary>
+            Выравнивание.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.AlignType.Center">
+            <summary>
+            По центру.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.AlignType.Left">
+            <summary>
+            По левому краю.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.AlignType.Right">
+            <summary>
+            По правому краю.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.AlignType.Null">
+            <summary>
+            Выравнивание не задано.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.XAxis">
+            <summary>
+            Данные оси X.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotOptionsColumn">
+            <summary>
+            Параметры для столбчатых графиков.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.PlotOptionsColumn.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsColumn.CropThreshold">
+            <summary>
+            Порог отрисовки точек графика.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsColumn.ShowInLegend">
+            <summary>
+            Отображать легенду.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsColumn.PointWidth">
+            <summary>
+            Величина точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsColumn.PointPadding">
+            <summary>
+            Отступ точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsColumn.MinPointLength">
+            <summary>
+            Минимальная величина точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsColumn.GroupPadding">
+            <summary>
+            Группа полей.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsColumn.ColorByPoint">
+            <summary>
+            Цвет точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsColumn.BorderColor">
+            <summary>
+            Цвет контура.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsColumn.BorderRadius">
+            <summary>
+            Радиус закругления контура.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.PlotOptionsColumn.BorderWidth">
+            <summary>
+            Толщина контура.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotOptions">
+            <summary>
+            Объект-оболочка конфигурирования объектов для каждого типа серии.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotLines">
+            <summary>
+            Коллекция линий отбивок.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.CSSObject">
+            <summary>
+            Класс стилей CSS
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.CSSObject.Background">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Crosshair">
+            <summary>
+            Значения линии перекрестья.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Crosshair.Width">
+            <summary>
+            Ширина линии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Crosshair.Color">
+            <summary>
+            Цвет линии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Crosshair.DashStyleType">
+            <summary>
+            Стиль толщины линии.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Crosshair.ZIndex">
+            <summary>
+            Индекс 
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.EventSeriesType">
+            <summary>
+            Тип события диаграммы.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventSeriesType.Click">
+            <summary>
+            Нажатие.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventSeriesType.CheckboxClick">
+            <summary>
+            Нажатия на контейнер.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventSeriesType.Hide">
+            <summary>
+            Сокрытия.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventSeriesType.LegendItemClick">
+            <summary>
+            События нажатия на легенду.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventSeriesType.MouseOver">
+            <summary>
+            Наведения курсора мыши.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventSeriesType.MouseOut">
+            <summary>
+            Уведения курсора мыши.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.EventSeriesType.Show">
+            <summary>
+            Отображения.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.Event">
+            <summary>
+            Базовый класс формирования события
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.Event.ToString">
+            <summary>
+            Вернуть сериализованное значение обработчика события.
+            </summary>
+            <returns>Сериализованное значение обработчика события.</returns>
+        </member>
+        <member name="M:Tip.Charts.Event.ToLoweredName(System.String)">
+            <summary>
+            Спистить первую букуву строки в нижний регистр.
+            </summary>
+            <param name="infoName">Преобразуемая строка.</param>
+            <returns>Преобразованная строка.</returns>
+        </member>
+        <member name="P:Tip.Charts.Event.Attributes">
+            <summary>
+            Атрибуты функции.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Event.Text">
+            <summary>
+            Текст обработчика события.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.Event.Type">
+            <summary>
+            Тип события.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.SeriesType">
+            <summary>
+            Типы диагрммм.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.SeriesType.Area">
+            <summary>
+            С областями (областная)
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.SeriesType.AreaSpline">
+            <summary>
+            Сглаженная с областями.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.SeriesType.Bar">
+            <summary>
+            Гистограмма.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.SeriesType.Column">
+            <summary>
+            Столбчатая.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.SeriesType.Line">
+            <summary>
+            График. По умолчанию.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.SeriesType.Pie">
+            <summary>
+            Круговая диаграмма.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.SeriesType.Scatter">
+            <summary>
+            Диаграмма разброса.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.SeriesType.Spline">
+            <summary>
+            Сглаженная.
+            </summary>
+        </member>
+        <member name="F:Tip.Charts.SeriesType.Series">
+            <summary>
+            Серия.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.MarkerStates">
+            <summary>
+            Состояния маркера.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.MarkerStates.Hover">
+            <summary>
+            Настройка захваченного маркера точки.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.MarkerStates.Select">
+            <summary>
+            Настройка выбранного маркера точки.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.PlotBands">
+            <summary>
+            Коллекция полос отбивок.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.MenuItems">
+            <summary>
+            Меню кнопки экспорта.
+            </summary>
+        </member>
+        <member name="T:Tip.Charts.DateTimeLabelFormats">
+            <summary>
+            Формат дат и времени.
+            </summary>
+        </member>
+        <member name="M:Tip.Charts.DateTimeLabelFormats.#ctor">
+            <summary>
+            Конструктор.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DateTimeLabelFormats.Second">
+            <summary>
+            Секунда.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DateTimeLabelFormats.Minute">
+            <summary>
+            Минута.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DateTimeLabelFormats.Hour">
+            <summary>
+            Час.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DateTimeLabelFormats.Day">
+            <summary>
+            День.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DateTimeLabelFormats.Week">
+            <summary>
+            Неделя.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DateTimeLabelFormats.Month">
+            <summary>
+            Месяц.
+            </summary>
+        </member>
+        <member name="P:Tip.Charts.DateTimeLabelFormats.Year">
+            <summary>
+            Год.
+            </summary>
+        </member>
+    </members>
+</doc>

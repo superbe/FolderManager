@@ -1,0 +1,59 @@
+<chart divLineAlpha="0" bgColor="" bgAlpha="0,0" showBorder="0" legendPosition="RIGHT" yAxisName="2010" xAxisName="2009   " caption="" decimals="2" labelDisplay="1" baseFont="Tahoma" baseFontSize="11" baseFontColor="505050" showLowerLines="0" showUpperLines="0" complexAnchorLegend="1" complexColumnLegend="1" palette="2" is3D="1" animation="1" clipBubbles="1" xAxisMaxValue="100" yAxisMaxValue="100" xAxisMinValue="0" yAxisMinValue="0" showPlotBorder="0" chartRightMargin="10" charttopMargin="5" chartleftMargin="0" chartBottomMargin="0" bgSWF="../Images/fon-for-svg.png" canvasBgAlpha ="0" showLegend="1" divLineThickness="0" showAlternateHGridColor="0" xAxisNamePadding="0" yAxisNamePadding="0"  plotBorderThickness="0" numberPrefix="" showYAxisValues ="1" adjustDiv="1" numDivLines="10" seriesNameInToolTip="1">
+	<categories>
+		<category name="0" x="0" />
+		<category name="10" x="10" />
+		<category name="20" x="20" />
+		<category name="30" x="30" />
+		<category name="40" x="40" />
+		<category name="50" x="50" />
+		<category name="60" x="60" />
+		<category name="70" x="70" />
+		<category name="80" x="80" />
+		<category name="90" x="90"  />
+		<category name="100" x="100" />
+	</categories>
+	<dataSet seriesName="Экономическое развитие" color="AFD8F8">
+		<set alpha="85" />
+	</dataSet>
+	<dataSet seriesName="Здравоохранение и здоровье населения" color="F6BD0F">
+		<set alpha="85" />
+	</dataSet>
+	<dataSet seriesName="Общее образование" color="8BBA00">
+		<set alpha="85" />
+	</dataSet>
+	<dataSet seriesName="Начальное и среднее профессиональное образование" color="FF8E46">
+		<set alpha="85" />
+	</dataSet>
+	<dataSet seriesName="Жилищное строительство и обеспечение граждан жильем" color="008E8E">
+		<set alpha="85" />
+	</dataSet>
+	<dataSet seriesName="Жилищно-коммунальное хозяйство" color="D64646">
+		<set alpha="85" />
+	</dataSet>
+	<dataSet seriesName="Дорожное хозяйство" color="8E468E">
+		<set alpha="85" />
+	</dataSet>
+	<dataSet seriesName="Обеспечение безопасности граждан" color="588526">
+		<set alpha="85" />
+	</dataSet>
+	<dataSet seriesName="Организация государственного и муниципального управления" color="B3AA00">
+		<set alpha="85" />
+	</dataSet>
+	<dataSet seriesName="Энергосбережение и повышение энергетической эффективности" color="">
+		<set alpha="85" />
+	</dataSet>
+	<dataSet seriesName="Охрана окружающей среды" color="">
+		<set alpha="85" />
+	</dataSet>
+	<styles>
+		<definition>
+			<style name="myToolTipFont" type="font" font="Tahoma" size="10" color="000000"/>
+			<style name="myXaxisName" type="font" />
+			<style name="myHTMLFont" type="font" isHTML="1" />
+		</definition>
+		<application>
+			<apply toObject="ToolTip" styles="myHTMLFont" />
+			<apply toObject="XaxisName" styles="myXaxisName" />
+		</application>
+	</styles>
+</chart>
